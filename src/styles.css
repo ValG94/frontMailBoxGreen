@@ -5,6 +5,7 @@ html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
 }
 
 h1,
@@ -23,11 +24,12 @@ p {
 .spacer {
   flex: 1;
 }
+
+header{
+width: 100vw;
+}
+
 .toolbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   height: 100px;
   display: flex;
   align-items: center;
@@ -35,24 +37,6 @@ p {
   color: forestgreen;
   font-weight: 600;
   text-align: center;
-}
-
-.toolbar #home-logo{
-  height: 24px;
-  margin: 0 8px;
-  fill: forestgreen;
-}
-
-.footer #twitter-logo {
-  height: 40px;
-  margin: 0 8px;
-  fill: forestgreen;
-}
-
-.footer #youtube-logo {
-  height: 40px;
-  margin: 0 16px;
-  fill: forestgreen;
 }
 
 .search{
@@ -66,14 +50,11 @@ p {
   padding: 14px;
   border-radius: 2px;
   border: solid forestgreen 1px;
+/* montrer l'input en hover seulement? */
 }
 
-.toolbar #user-logo{
-  height: 40px;
-  margin: 0 16px;
-  fill: forestgreen;
-}
-
+.toolbar #home-logo,
+.toolbar #user-logo,
 .toolbar #search-logo{
   height: 40px;
   margin: 0 16px;
@@ -83,15 +64,18 @@ p {
 
 .toolbar #home-logo:hover,
 .toolbar #user-logo:hover,
+.footer #twitter-logo:hover,
+.footer #youtube-logo:hover,
 .toolbar #search-logo{
   opacity: 0.8;
 }
-.toolbar #twitter-logo:hover,
-.toolbar #youtube-logo:hover{
-  opacity: 0.8;
+
+.footer #twitter-logo,
+.footer #youtube-logo {
+  height: 40px;
+  margin: 0 16px;
+  fill: forestgreen;
 }
-
-
 .content {
   display: flex;
   margin: 82px auto 32px;

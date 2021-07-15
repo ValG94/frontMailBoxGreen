@@ -17,7 +17,7 @@ export class ChallengeListComponent implements OnInit {
   constructor(private route: ActivatedRoute, private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.apiService.getChallengeList().subscribe();
+    this.apiService.getChallengeList().subscribe(challengeList=> this.challengeList= challengeList);
   }
 
 }
