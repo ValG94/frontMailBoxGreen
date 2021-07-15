@@ -4,13 +4,13 @@ import {ActivatedRoute} from "@angular/router";
 import {ApiService} from "../api.service";
 
 @Component({
-  selector: 'app-play',
-  templateUrl: './play.component.html',
-  styleUrls: ['./play.component.css']
+  selector: 'app-challenge-list',
+  templateUrl: './challenge-list.component.html',
+  styleUrls: ['./challenge-list.component.css']
 })
-export class PlayComponent implements OnInit {
+export class ChallengeListComponent implements OnInit {
 
-  //ajout d'une interface challenge
+
   challengeList: Challenge[]=[];
 
   // Définition du constructeur
@@ -19,4 +19,5 @@ export class PlayComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.getChallengeList().subscribe();
   }
+
 }

@@ -1,0 +1,29 @@
+<p>challenge-list works!</p>
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Nom</th>
+    <th>Catégorie</th>
+    <th>Nombre de cartes</th>
+    <th>Jouer!</th>
+    <th>Editer?</th>
+    <th>Supprimer?</th>
+    <th>Date de création</th>
+    <th>Date de mise à jour</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let challenge of challengeList">
+    <td>{{challenge.id}}</td>
+    <td> {{challenge.name}}</td><<td>{{challenge.level}}</td>
+    <td>{{challenge.contentList.length}}</td>
+<!--    <td><a routerLink ="/edit/{{challenge.id}}">Modifier</a></td>-->
+    <td><a routerLink="/play/{{challenge.id}}">Jouer</a></td>
+<!--    <td> <button (click)="delete(challenge)">Supprimer</button></td>-->
+
+  </tr>
+  </tbody>
+</table>
