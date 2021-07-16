@@ -18,9 +18,15 @@ export class ApiService {
   constructor(private http: HttpClient) {
   }
 
+  //Récupération de la liste des challenges
 getChallengeList() {
   return this.http.get<Challenge[]>(this.baseAPIUrl + 'challenges');
 }
+
+//Update des likes pour chacun des challenges
+    updateLike(chalenge: Challenge): Observable<Challenge>{
+    return this.http.put<Challenge>(this.baseAPIUrl, chalenge);
+  }
 
 // NB: modification de l'api pour créer la requête correspondante (find by id)
   getChallengeContentByChallengeId(id: number): Observable<ContentChallenge[]> {

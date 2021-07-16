@@ -5,3 +5,30 @@ h1 {
   margin: 0;
   text-align: center;
 }
+
+h2{
+  text-align: center;
+}
+
+span{
+  margin: auto;
+ text-align: center;
+}
+
+.challenge{
+  border: thin solid #8ABA4D;
+  background-color: ghostwhite;
+  width: 400px;
+  margin: auto;
+  border-radius: 5px;
+  margin: auto;
+  justify-content: center;
+
+
+}
+
+.img-container{
+  display: flex;
+   margin: auto;
+  justify-content: center;
+}

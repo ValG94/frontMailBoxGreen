@@ -4,10 +4,10 @@
 
   <span>Date de création : {{challenge.dateCreation}}</span>
   <div _ngcontent class="img-container">
-    <img _ngcontent [src]="challenge.imgUrl">
+    <img _ngcontent [src]="challenge.imgUrl" width="80px">
   </div>
   <p>{{challenge.description}}</p>
-  <span>Nombre de likes : {{challenge.likeChallenge}}</span> <button (click)="likes(challenge)">👍</button>
+  <span>Nombre de likes : {{challenge.likeChallenge}}</span> <button (click)="updateLikes(challenge)">👍</button>
   </div>
 
 <!--

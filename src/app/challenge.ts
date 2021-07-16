@@ -1,4 +1,4 @@
-import {contentChallenge} from "./contentChallenge";
+import {ContentChallenge} from "./contentChallenge";
 
 export interface Challenge {
   id: number;
@@ -8,5 +8,5 @@ export interface Challenge {
   dateCreation: Date;
   level: number;
   likeChallenge: number;
-  contentList: contentChallenge[];
+  contentList: ContentChallenge[];
 }
