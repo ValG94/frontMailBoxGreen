@@ -11,13 +11,24 @@ import {ApiService} from "../api.service";
 export class ChallengeListComponent implements OnInit {
 
 
-  challengeList: Challenge[]=[];
+  //challengeList: Challenge[]=[];
+
+  challengeList = this.apiService.getChallengeList();
+
+
+  // @ts-ignore
+  likes(challenge){
+    challenge.like++;
+  }
 
   // Définition du constructeur
-  constructor(private route: ActivatedRoute, private apiService: ApiService) { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.apiService.getChallengeList().subscribe(challengeList=> this.challengeList= challengeList);
+  //this.apiService.getChallengeList().subscribe(challengeList=> this.challengeList= challengeList);
+this.apiService.getChallengeList()
+
+
   }
 
 }

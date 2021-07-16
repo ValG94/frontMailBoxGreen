@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Challenge} from "./challenge";
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,9 +17,11 @@ export class ApiService {
   constructor(private http: HttpClient) {
   }
 
-getChallengeList() {
-  return this.http.get<Challenge[]>(this.baseAPIUrl + 'challenges');
+getChallengeList(): Observable<Challenge[]> {
+  return this.http.get<Challenge[]>(this.baseAPIUrl + "challenges");
 }
+
+//update du like à faire dans la bdd
 
 // Liste des questions par challenge => []
 // getCardsListByTimelineId(timelineId: number) {
