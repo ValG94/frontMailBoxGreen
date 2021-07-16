@@ -23,13 +23,19 @@ getChallengeList() {
   return this.http.get<Challenge[]>(this.baseAPIUrl + 'challenges');
 }
 
+<<<<<<< HEAD
 //Update des likes pour chacun des challenges
     updateLike(chalenge: Challenge): Observable<Challenge>{
     return this.http.put<Challenge>(this.baseAPIUrl, chalenge);
   }
+=======
+getChallengeById(id: number): Observable<Challenge>{
+  return this.http.get<Challenge>(this.baseAPIUrl + 'challenges/' + id);
+}
+>>>>>>> 235825b387e8a92123b44e2adbdf9ef7bb8dd0ce
 
 // NB: modification de l'api pour créer la requête correspondante (find by id)
-  getChallengeContentByChallengeId(id: number): Observable<ContentChallenge[]> {
-    return this.http.get<ContentChallenge[]>(this.baseAPIUrl + 'challenges/' + id);
+  getChallengeContentListByChallengeId(challengeId: number): Observable<ContentChallenge[]> {
+    return this.http.get<ContentChallenge[]>(this.baseAPIUrl + 'challenges/'+ challengeId+ 'contents');
   }
 }
