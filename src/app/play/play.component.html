@@ -1,1 +1,7 @@
 <p>play works!</p>
+
+<div id="questionToAnswer" *ngIf="questionToAnswer">
+  <h3>{{questionToAnswer.question}}</h3>
+  <h4>{{questionToAnswer.answer}}</h4>
+  <button>Go!</button>
+</div>
