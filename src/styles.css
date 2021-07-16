@@ -180,18 +180,6 @@ a:hover {
   color: #125699;
 }
 
-.terminal {
-  position: relative;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 6px;
-  padding-top: 45px;
-  margin-top: 8px;
-  overflow: hidden;
-  background-color: rgb(15, 15, 16);
-}
-
-
 .circle-link {
   height: 40px;
   width: 40px;
@@ -221,12 +209,10 @@ footer {
   bottom: 0;
   align-content: center;
 
-
 }
 
 footer a {
   display: flex;
-
 
 }
 
@@ -280,11 +266,6 @@ svg#clouds {
 
   .card.highlight-card span {
     margin-left: 72px;
-  }
-
-  svg#rocket-smoke {
-    right: 120px;
-    transform: rotate(-5deg);
   }
 }
 

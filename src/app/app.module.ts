@@ -7,7 +7,7 @@ import {HomeComponent} from './home/home.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {PlayComponent} from './play/play.component';
-import { ChallengeListComponent } from './challenge-list/challenge-list.component';
+import {ChallengeListComponent} from './challenge-list/challenge-list.component';
 
 @NgModule({
   declarations: [

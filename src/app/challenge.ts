@@ -1,9 +1,12 @@
-import {ContentChallenge} from "./contentChallenge";
+import {contentChallenge} from "./contentChallenge";
 
 export interface Challenge {
   id: number;
-  name: string;
-level: number;
-like: number;
-contentList: ContentChallenge[];
+  nameChallenge: string;
+  imgUrl: string;
+  description: string
+  dateCreation: Date;
+  level: number;
+  likeChallenge: number;
+  contentList: contentChallenge[];
 }
