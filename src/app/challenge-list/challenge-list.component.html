@@ -1,13 +1,6 @@
 <h1>Défis à relever</h1>
-<!-- TODO: revoir l'utilité de _ngcontent -->
-<!-- TODO: créer un routerLink sur la div vers le composant PLAY -->
-<div _ngcontent
-
-     class="challenge" *ngFor="let challenge of challengeList | async">
-
-<a routerLink="/play/{{challenge.id}}">
-
-
+<div _ngcontent class="challenge" *ngFor="let challenge of challengeList | async">
+  <a routerLink="/play/{{challenge.id}}">
   <h2>{{challenge.nameChallenge}}</h2>
 
   <span>Date de création : {{challenge.dateCreation}}</span>
@@ -15,12 +8,23 @@
     <img _ngcontent [src]="challenge.imgUrl">
   </div>
   <p>{{challenge.description}}</p>
-  <span>Nombre de likes : {{challenge.likeChallenge}}</span> <button (click)="likes(challenge)">👍</button>
-</a>
+<!--  <span>Nombre de likes : {{challenge.likeChallenge}}</span> <button (click)="likes(challenge)">👍</button>-->
+  </a>
 </div>
 
 <!--
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Nom du défis </th>
+    <th>Difficulté</th>
+    <th>Jouer!</th>
+    <th>Date de création</th>
 
+  </tr>
+  </thead>
+  <tbody>
   <tr *ngFor="let challenge of challengeList | async">
     <td>{{challenge.id}}</td>
     <td> {{challenge.name}}</td><<td>{{challenge.level}}</td>

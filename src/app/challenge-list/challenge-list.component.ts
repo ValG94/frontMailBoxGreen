@@ -10,15 +10,19 @@ import {ApiService} from "../api.service";
 })
 export class ChallengeListComponent implements OnInit {
 
+ // challenge : Challenge | undefined
 
   //challengeList: Challenge[]=[];
 
   challengeList = this.apiService.getChallengeList();
 
-
   // @ts-ignore
-  likes(challenge){
-    challenge.like++;
+  likes = this.apiService.updateLike();
+
+
+   // @ts-ignore
+  updateLikes(challenge){
+   challenge.likes++;
   }
 
   // Définition du constructeur

@@ -6,12 +6,32 @@ h1 {
   text-align: center;
 }
 
-.challenge {
-  width: 50%;
-  margin: auto;
+h2{
+  text-align: center;
 }
 
+span{
+  margin: auto;
+ text-align: center;
+}
+
+.challenge{
+  border: thin solid #8ABA4D;
+  background-color: ghostwhite;
+  width: 50%;
+  margin: auto;
+  border-radius: 5px;
+  margin: auto;
+  justify-content: center;
+}
+
+.img-container{
+  display: flex;
+   margin: auto;
+  justify-content: center;
+}
 
 img {
   max-width: 300px;
 }
+
