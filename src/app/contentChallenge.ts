@@ -1,6 +1,6 @@
 export interface ContentChallenge {
 id: number;
-answer: string;
-question: string;
+answers: string;
+questions: string;
 challengeId: number;
 }
