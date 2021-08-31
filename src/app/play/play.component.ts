@@ -27,7 +27,7 @@ export class PlayComponent implements OnInit {
     const routeParams = this.route.snapshot.paramMap;
     const challengeIdFromRoute = Number(routeParams.get('id'));
 
-    this.apiService.getChallengeContentByChallengeId(challengeIdFromRoute).subscribe(contentChallenge => {
+    this.apiService.getChallengeContentListByChallengeId(challengeIdFromRoute).subscribe(contentChallenge => {
      this.questionList = contentChallenge;
       console.log(this.questionList);
       //console.log(challengeContent);

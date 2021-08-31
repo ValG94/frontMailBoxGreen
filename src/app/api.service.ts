@@ -12,21 +12,21 @@ export class ApiService {
 
 // branchement sur l'API
   baseAPIUrl = "http://localhost:8080/api/";
-// pour le post et le put, il faut mettre les données de la nouvelle carte/ de l'update
+// TODO pour le post et le put, il faut mettre les données de la nouvelle carte/ de l'update
 
 
   constructor(private http: HttpClient) {
   }
 
 getChallengeList() {
-  return this.http.get<Challenge[]>(this.baseAPIUrl + 'challenges');
+  return this.http.get<Challenge[]>(this.baseAPIUrl + 'challengeList');
 }
 
 getChallengeById(id: number): Observable<Challenge>{
-  return this.http.get<Challenge>(this.baseAPIUrl + 'challenges/' + id);
+  return this.http.get<Challenge>(this.baseAPIUrl + 'challengeList/' + id);
 }
 
-// NB: modification de l'api pour créer la requête correspondante (find by id)
+// TODO: modification de l'api pour créer la requête correspondante (find by id) => utilisation dans le play
   getChallengeContentListByChallengeId(challengeId: number): Observable<ContentChallenge[]> {
     return this.http.get<ContentChallenge[]>(this.baseAPIUrl + 'challenges/'+ challengeId+ 'contents');
   }

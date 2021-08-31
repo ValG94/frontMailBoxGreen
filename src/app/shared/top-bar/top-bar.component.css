@@ -1,0 +1,48 @@
+
+.top-bar {
+  display: flex;
+  width: 100%;
+  overflow: auto;
+  color: forestgreen;
+  font-weight: 600;
+  justify-content: space-between;
+  fill: forestgreen;
+}
+
+div{
+  margin: 5px;
+  height: 100px;
+  text-align: center;
+  padding:5px;
+  align-items: center;
+  display: inline-flex;
+}
+
+#input-search{
+  float: right;
+  padding: 6px;
+  border-radius: 2px;
+  border: solid forestgreen 1px;
+  margin-right: 5px;
+  /*show: hidden;*/
+  /* montrer l'input en hover seulement? */
+}
+
+.top-bar #home-logo,
+.top-bar #user-logo,
+.top-bar #search-logo{
+  height: 40px;
+  margin: 0 16px;
+  fill: forestgreen;
+}
+
+
+.top-bar #home-logo:hover,
+.top-bar #user-logo:hover,
+.footer #twitter-logo:hover,
+.footer #youtube-logo:hover,
+.top-bar #search-logo{
+  opacity: 0.8;
+}
+
+

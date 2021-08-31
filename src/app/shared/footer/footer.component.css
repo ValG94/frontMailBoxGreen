@@ -1,0 +1,31 @@
+
+footer {
+  display: flex;
+  width: 100%;
+  margin-top: 8px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+footer a {
+  display: inline-flex;
+}
+
+.footer #twitter-logo,
+.footer #youtube-logo {
+  height: 40px;
+  margin: 0 8px;
+  fill: forestgreen;
+}
+
+svg#clouds {
+  position: fixed;
+  bottom: -360px;
+  /*max-height: 300px;*/
+  /*background-position: bottom;*/
+  /*width: 100%;*/
+  /*left: -230px;*/
+  /*z-index: -10;*/
+  /*width: 1920px;*/
+}

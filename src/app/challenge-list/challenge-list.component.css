@@ -5,3 +5,13 @@ h1 {
   margin: 0;
   text-align: center;
 }
+
+.challenge {
+  width: 50%;
+  margin: auto;
+}
+
+
+img {
+  max-width: 300px;
+}
