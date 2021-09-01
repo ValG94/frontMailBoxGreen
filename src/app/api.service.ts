@@ -36,7 +36,6 @@ export class ApiService {
   }
 
 
-// TODO: modification de l'api pour créer la requête correspondante (find by id) => utilisation dans le play
   getChallengeContentListByChallengeId(challengeId: number): Observable<ContentChallenge[]> {
     return this.http.get<ContentChallenge[]>(this.baseAPIUrl + 'challenges/' + challengeId + '/contents');
   }

@@ -1,7 +1,29 @@
-<p>play works!</p>
+
 
 <div id="questionToAnswer" *ngIf="questionToAnswer">
-  <h3>{{questionToAnswer.question}}</h3>
-  <h4>{{questionToAnswer.answer}}</h4>
-  <button>Go!</button>
+
+    <p>{{questionToAnswer.questions}}</p>
+
+<!-- Form to answer the question-->
+  <form [formGroup]="guessForm" (ngSubmit)="guessQuestion()">
+<!--   two possible answers : true /false -->
+    <div class="answerListItem" data-pos="1">
+      <label>
+  <input class="answerInput" type= "radio" value="1" name="question1"> true </label></div>
+  <div class="answerListItem" data-pos="2">
+    <label>
+      <input class="answerInput" type= "radio" value="2" name="question1" > false </label></div>
+
+  <!-- TODO go to next question-->
+      <button type="submit">Soumettre</button>
+  </form>
+
+  <div *ngIf="isRightAnswer">  <h4>{{questionToAnswer.answers}}</h4><h1>Bravo bonne réponse! </h1></div>
+
+
+  <div *ngIf="questionToAnswer === null">
+    <h1>Bravo pour votre participation !</h1>
+    <h2>Vous avez gagné XX points </h2>
+  </div>
+
 </div>
