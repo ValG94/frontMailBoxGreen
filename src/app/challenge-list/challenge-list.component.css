@@ -1,6 +1,6 @@
 h1 {
   font-family: inherit;
-  color: darkgreen;
+  color: forestgreen;
   padding: 30px 40px;
   margin: 0;
   text-align: center;
@@ -12,7 +12,18 @@ h2{
 
 span{
   margin: auto;
- text-align: center;
+  padding-left: 15px;
+  padding-right: 10px;
+  text-align: center;
+
+}
+
+p{
+  color: forestgreen;
+  margin: auto;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  text-align: left;
 }
 
 .challenge{
@@ -32,6 +43,11 @@ span{
 }
 
 img {
-  max-width: 300px;
+  max-width: 200px;
+  padding: 5px 2px;
+}
+
+button{
+  padding-bottom: 5px;
 }
 

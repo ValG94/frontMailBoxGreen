@@ -4,6 +4,7 @@ import {Challenge} from "./challenge";
 import {ContentChallenge} from "./contentChallenge";
 import {Observable} from "rxjs";
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -26,8 +27,8 @@ export class ApiService {
 
 
 //Update des likes pour chacun des challenges
-  updateLike(chalenge: Challenge): Observable<Challenge> {
-    return this.http.put<Challenge>(this.baseAPIUrl, chalenge);
+  updateLike(challenge: Challenge): Observable<Challenge> {
+    return this.http.put<Challenge>(this.baseAPIUrl, challenge);
   }
 
   getChallengeById(id: number): Observable<Challenge> {
@@ -37,6 +38,6 @@ export class ApiService {
 
 // TODO: modification de l'api pour créer la requête correspondante (find by id) => utilisation dans le play
   getChallengeContentListByChallengeId(challengeId: number): Observable<ContentChallenge[]> {
-    return this.http.get<ContentChallenge[]>(this.baseAPIUrl + 'challenges/' + challengeId + 'contents');
+    return this.http.get<ContentChallenge[]>(this.baseAPIUrl + 'challenges/' + challengeId + '/contents');
   }
 }

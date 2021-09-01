@@ -3,13 +3,14 @@
   <a routerLink="/play/{{challenge.id}}">
   <h2>{{challenge.nameChallenge}}</h2>
 
-  <span>Date de création : {{challenge.dateCreation}}</span>
+<!--  <span>Date de création : {{challenge.dateCreation}}</span>-->
+    <p>{{challenge.description}}</p>
   <div _ngcontent class="img-container">
     <img _ngcontent [src]="challenge.imgUrl">
-  </div>
-  <p>{{challenge.description}}</p>
-<!--  <span>Nombre de likes : {{challenge.likeChallenge}}</span> <button (click)="likes(challenge)">👍</button>-->
-  </a>
+  </div></a>
+  <span>Nombre de likes : {{challenge.likeChallenge}}</span>
+  <button (click)="updateLikes(challenge)">👍</button>
+
 </div>
 
 <!--

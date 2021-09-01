@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Challenge} from "../challenge";
 import {ActivatedRoute} from "@angular/router";
 import {ApiService} from "../api.service";
+import {FormBuilder} from "@angular/forms";
+
 
 @Component({
   selector: 'app-challenge-list',
@@ -10,7 +12,12 @@ import {ApiService} from "../api.service";
 })
 export class ChallengeListComponent implements OnInit {
 
- // challenge : Challenge | undefined
+
+
+  // Je crée mon objet JS qui représente le formulaire d'édition d'une carte du timeline
+  //challengeForm = this.formBuilder.group({
+    //likeChallenge: ''
+  //});
 
   //challengeList: Challenge[]=[];
 
@@ -18,15 +25,21 @@ export class ChallengeListComponent implements OnInit {
 
   // @ts-ignore
   likes = this.apiService.updateLike();
+  //formBuilder: any;
 
 
    // @ts-ignore
   updateLikes(challenge){
-   challenge.likes++;
+   challenge.likeChallenge++;
   }
 
+ /* onLikesEdit(challenge : Challenge) {
+    this.challenge.patchValue({
+      likeChallenge: challenge.likeChallenge
+    });}*/
+
   // Définition du constructeur
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
   //this.apiService.getChallengeList().subscribe(challengeList=> this.challengeList= challengeList);
