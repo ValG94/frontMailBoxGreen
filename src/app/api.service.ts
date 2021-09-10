@@ -14,9 +14,6 @@ export class ApiService {
 // branchement sur l'API
   baseAPIUrl = "http://localhost:8080/api/";
 
-// TODO pour le post et le put, il faut mettre les données de la nouvelle carte/ de l'update
-
-
   constructor(private http: HttpClient) {
   }
 
